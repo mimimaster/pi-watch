@@ -1,0 +1,49 @@
+{
+  "name": "pi-watch",
+  "version": "0.1.0",
+  "description": "Pi coding-agent extension: /watch samples video frames and injects a timestamped transcript into the current session",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "watch",
+    "video",
+    "ffmpeg",
+    "whisper"
+  ],
+  "files": [
+    "extensions",
+    "src",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "test:watch": "node --test --watch test/*.test.mjs",
+    "doctor": "node --input-type=module -e \"import { checkDeps, formatDoctorReport } from './src/doctor.ts'; console.log(formatDoctorReport(await checkDeps()));\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/pi-watch.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
