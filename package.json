@@ -17,6 +17,7 @@
     "whisper"
   ],
   "files": [
+    "index.ts",
     "extensions",
     "src",
     "README.md",

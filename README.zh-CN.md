@@ -26,7 +26,13 @@ pi install ./path/to/pi-watch
 
 然后在会话里 `/reload`（或重启 pi）。
 
-**piwin** 使用同一套 pi 扩展包。用 piwin 的扩展管理安装 `pi-watch`，或像上面一样 `pi install`。本仓库**不修改** piwin 核心。
+**piwin** 以独立托管扩展的方式从 Git 安装（仓库根目录 `index.ts` 是 piwin 入口）：
+
+```bash
+piwin extension install --git https://github.com/mimimaster/pi-watch --name piwin-mimimaster-pi-watch
+```
+
+然后在 piwin 扩展设置里启用，并新开会话。本仓库**不修改** piwin 核心。
 
 开发时：
 

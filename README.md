@@ -26,7 +26,13 @@ pi install ./path/to/pi-watch
 
 Then `/reload` in the session (or restart pi).
 
-**piwin** loads the same pi extension packages. Install `pi-watch` through piwin’s extension manager, or with `pi install` as above. This package does **not** patch piwin core.
+**piwin** installs it as a standalone managed extension from Git (the repo root `index.ts` is the piwin entry point):
+
+```bash
+piwin extension install --git https://github.com/mimimaster/pi-watch --name piwin-mimimaster-pi-watch
+```
+
+Then enable it in piwin’s extension settings and start a new session. This package does **not** patch piwin core.
 
 During development:
 
